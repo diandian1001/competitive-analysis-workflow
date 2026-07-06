@@ -3,147 +3,147 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-7c5cfc.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/diandian1001/competitive-analysis-workflow?style=social)](https://github.com/diandian1001/competitive-analysis-workflow)
 
-一套标准化的竞品分析流程框架，适用于运营策略研究、产品功能对比、内容方向可行性验证、市场机会扫描。
+[中文版](README_zh.md)
 
-> 从"凭经验"到"有方法"——五阶段标准流程，让竞品分析可复用、可评估、可协作。
+A **standardized competitive analysis workflow** — a five-phase framework for market research, product strategy, and content direction validation.
 
----
-
-## 为什么做这个
-
-竞品分析是运营和产品岗位的高频需求，但大多数团队的做法是：
-
-- 每次临场发挥，流程取决于个人习惯
-- 做完就做完，没有结构化沉淀
-- "这个方向能不能做"靠直觉，缺乏数据支撑的判断框架
-- 换个人接手又得从零开始
-
-这套workflow的目标是：**让任何一个有基本行业认知的人，按流程走就能产出质量底线可控的竞品分析。**
+> From "gut feeling" to "proven method" — a repeatable, evaluable, and collaborative process.
 
 ---
 
-## Workflow 全景
+## Why This Exists
+
+Most teams do competitive analysis this way:
+
+- Ad-hoc every time, quality depends on who's doing it
+- No structured output, no reusable framework
+- "Should we pursue this direction?" answered by intuition, not data
+- New team member starts from scratch
+
+This workflow ensures **anyone with basic domain knowledge can produce competitive analysis with a consistent quality baseline** by following the process.
+
+---
+
+## Workflow Overview
 
 ```
 Phase 1        Phase 2         Phase 3         Phase 4          Phase 5
-明确目标   →   选竞品采信息  →  建分析框架  →   填数据找Pattern →  出结论给建议
+Define Goal → Select Targets → Build Framework → Find Patterns → Conclusions
 ```
 
-| 阶段 | 核心动作 | 产出物 |
-|------|---------|--------|
-| Phase 1 明确目标 | 回答"为什么做、看谁、看什么" | 分析目标卡 |
-| Phase 2 竞品选择 | 三层漏斗选品（直接/间接/标杆） | 竞品档案卡 |
-| Phase 3 搭框架 | 根据目标选对比矩阵/用户旅程/SWOT/价值曲线 | 分析对比表 |
-| Phase 4 找Pattern | 填数据，找四类机会 | Pattern分类表 |
-| Phase 5 出结论 | 判断 + 差距 + 路径 + 风险 | 结论报告 |
-
-详细说明见 [`SKILL.md`](./SKILL.md)。
+| Phase | Core Action | Output |
+|-------|------------|--------|
+| Phase 1 Define Goal | Answer "why, who, what" | Analysis Goal Card |
+| Phase 2 Target Selection | Three-layer funnel (direct / indirect / benchmark) | Competitor Profile Card |
+| Phase 3 Build Framework | Choose: Comparison Matrix / User Journey / SWOT / Value Curve | Analysis Matrix |
+| Phase 4 Find Patterns | Fill data, identify 4 types of opportunities | Pattern Classification Table |
+| Phase 5 Conclusions | Judgment + Gap + Path + Risk | Conclusion Report |
 
 ---
 
-## 快速开始
+## Quick Start
 
-### 1. 克隆仓库
+### 1. Clone
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/competitive-analysis-workflow.git
+git clone https://github.com/diandian1001/competitive-analysis-workflow.git
 cd competitive-analysis-workflow
 ```
 
-### 2. 按流程执行
+### 2. Follow the Process
 
-1. 复制 `templates/分析目标卡.md`，填写你的分析目标
-2. 复制 `templates/竞品档案卡.md`，为每个竞品建立档案
-3. 复制 `templates/Pattern分类表.md`，填入数据并找pattern
-4. 参考 `examples/终端方向竞品分析.md` 看一个完整案例
+1. Copy `templates/Analysis_Goal_Card.md`, fill in your analysis objective
+2. Copy `templates/Competitor_Profile_Card.md`, build a profile for each competitor
+3. Copy `templates/Pattern_Classification.md`, fill in data and find patterns
+4. See `examples/Terminal_Direction_Analysis.md` for a complete walkthrough
 
-### 3. 输出报告
+### 3. Output Report
 
-结论先行，结构如下：
+Conclusion-first structure:
 
 ```
-一、核心判断（一句话）
-二、关键发现（3-5条，有数据）
-三、差距分析
-四、建议路径
-五、风险提示
+I. Core Verdict (one sentence)
+II. Key Findings (3-5 points, with data)
+III. Gap Analysis
+IV. Recommended Path
+V. Risk Flags
 ```
 
 ---
 
-## 核心工具
+## Core Tools
 
-### 三层漏斗选品
+### Three-Layer Funnel for Target Selection
 
-| 层级 | 选择标准 | 示例 |
-|------|---------|------|
-| 直接竞品 | 同行业 × 同渠道 × 同业务 | 同行业其他品牌的服务号 |
-| 间接竞品 | 不同行业 × 同用户群 × 同场景 | 电商平台对应频道 |
-| 标杆/灵感 | 不同行业 × 策略值得借鉴 | 私域运营做得好的品牌 |
+| Layer | Selection Criteria | Example |
+|-------|-------------------|---------|
+| Direct Competitors | Same industry × Same channel × Same business | Other brands' service accounts in the same sector |
+| Indirect Competitors | Different industry × Same user group × Same scenario | E-commerce platform corresponding channels |
+| Benchmarks | Different industry × Strategies worth borrowing | Brands with strong private domain operations |
 
-### 四类Pattern
+### Four Pattern Types
 
-| Pattern | 含义 | 行动指向 |
-|---------|------|---------|
-| 竞品有 + 我们没有 | 机会点 | 评估是否要补 |
-| 竞品有 + 我们做得差 | 差距点 | 需要改进 |
-| 竞品都有 + 都做得差 | 行业难题 | 谨慎投入 |
-| 我们有 + 竞品没有 | 差异化优势 | 重点强化 |
+| Pattern | Meaning | Action |
+|---------|---------|--------|
+| They have + We don't | Opportunity | Evaluate whether to build |
+| They have + We do poorly | Gap | Needs improvement |
+| Everyone has + Everyone does it poorly | Industry challenge | Invest cautiously |
+| We have + They don't | Differentiation | Strengthen it |
 
-### 四套分析框架
+### Four Analysis Frameworks
 
-- **框架A：功能/内容对比矩阵** — 最基础，适合功能对比
-- **框架B：用户旅程对比** — 适合转化路径分析
-- **框架C：SWOT差异化定位** — 适合结论阶段
-- **框架D：价值曲线对比** — 适合差异化定位，画雷达图
+- **Framework A: Feature/Content Comparison Matrix** — Most basic, good for feature comparison
+- **Framework B: User Journey Comparison** — Good for conversion path analysis
+- **Framework C: SWOT Differentiation** — Good for conclusion phase
+- **Framework D: Value Curve Comparison** — Good for differentiation positioning, radar charts
 
 ---
 
-## 仓库结构
+## Repository Structure
 
 ```
 competitive-analysis-workflow/
-├── README.md                          # 本文件
-├── SKILL.md                           # 完整workflow说明（Hermes Agent Skill格式）
+├── README.md                          # This file (English)
+├── README_zh.md                       # 中文版说明文档
+├── SKILL.md                           # Full workflow (Hermes Agent Skill format)
 ├── LICENSE                            # MIT License
 ├── templates/
-│   ├── 分析目标卡.md                   # Phase 1 模板
-│   ├── 竞品档案卡.md                   # Phase 2 模板
-│   └── Pattern分类表.md               # Phase 4 模板
+│   ├── Analysis_Goal_Card.md          # Phase 1 template
+│   ├── Competitor_Profile_Card.md     # Phase 2 template
+│   └── Pattern_Classification.md      # Phase 4 template
 └── examples/
-    └── 终端方向竞品分析.md             # 完整案例（运营商服务号终端方向）
+    └── Terminal_Direction_Analysis.md # Full case study (carrier service account)
 ```
 
 ---
 
-## 适用场景
+## Use Cases
 
-- 运营策略方向验证（"XX方向能不能做？"）
-- 产品功能竞品对比（"竞品有什么我们没有的？"）
-- 内容策略研究（"竞品的内容怎么做的？"）
-- 市场机会扫描（"这个赛道还有没有空间？"）
-
----
-
-## 常见坑
-
-| 坑 | 避坑方法 |
-|----|---------|
-| 目标太泛，做完不知道该干嘛 | Phase 1 必须输出分析目标卡 |
-| 只罗列不分析，没有对比和判断 | 用框架强制对比，找pattern |
-| 只看直接竞品，忽略跨行业标杆 | 三层漏斗至少覆盖两层 |
-| 数据不足就下结论 | 每条结论必须有数据支撑 |
-| 结论太虚，没有可执行性 | 每条建议必须有具体第一步 |
+- Operational strategy validation ("Should we pursue this direction?")
+- Product feature competitive comparison ("What do competitors have that we don't?")
+- Content strategy research ("How are competitors doing content?")
+- Market opportunity scanning ("Is there room in this space?")
 
 ---
 
-## 作者
+## Common Pitfalls
 
-**Diandian（点点）** — 用户研究员，2年+ UX Research 经验
+| Pitfall | Prevention |
+|---------|-----------|
+| Goal too vague, no clear next step | Phase 1 must output an Analysis Goal Card |
+| Listing without analyzing, no comparison or judgment | Use frameworks to force comparison, find patterns |
+| Only looking at direct competitors, missing cross-industry benchmarks | Three-layer funnel, cover at least two layers |
+| Drawing conclusions with insufficient data | Every conclusion must be backed by data |
+| Vague conclusions, not actionable | Every recommendation must have a concrete first step |
 
-- 心理学本科背景，擅长量化研究（问卷设计、K-Means聚类、会话分析）
-- 互联网行业经验
-- 研究方向：用户画像体系、转化链分析、竞品策略研究
+---
+
+## Author
+
+**Diandian** — User Researcher, 2+ years UX Research experience
+
+- Psychology background, skilled in quantitative research (survey design, K-Means clustering, session analysis)
+- Research areas: user profiling, conversion funnel analysis, competitive strategy
 
 ---
 
