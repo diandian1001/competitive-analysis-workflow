@@ -1,5 +1,8 @@
 # Competitive Analysis Workflow
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-7c5cfc.svg)](https://opensource.org/licenses/MIT)
+[![Stars](https://img.shields.io/github/stars/diandian1001/competitive-analysis-workflow?style=social)](https://github.com/diandian1001/competitive-analysis-workflow)
+
 一套标准化的竞品分析流程框架，适用于运营策略研究、产品功能对比、内容方向可行性验证、市场机会扫描。
 
 > 从"凭经验"到"有方法"——五阶段标准流程，让竞品分析可复用、可评估、可协作。
