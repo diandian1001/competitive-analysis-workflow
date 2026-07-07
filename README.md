@@ -1,152 +1,80 @@
-# Competitive Analysis Workflow
+# Competitive Analysis Workflow V2.0
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-7c5cfc.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/diandian1001/competitive-analysis-workflow?style=social)](https://github.com/diandian1001/competitive-analysis-workflow)
 
 [中文版](README_zh.md)
 
-A **standardized competitive analysis workflow** — a five-phase framework for market research, product strategy, and content direction validation.
+An **AI-guided competitive analysis workflow** — give this project to any AI tool (ChatGPT/Claude/Hermes/Trae), and it becomes your analysis assistant, walking you from goal definition to conclusion delivery.
 
-> From "gut feeling" to "proven method" — a repeatable, evaluable, and collaborative process.
-
----
-
-## Why This Exists
-
-Most teams do competitive analysis this way:
-
-- Ad-hoc every time, quality depends on who's doing it
-- No structured output, no reusable framework
-- "Should we pursue this direction?" answered by intuition, not data
-- New team member starts from scratch
-
-This workflow ensures **anyone with basic domain knowledge can produce competitive analysis with a consistent quality baseline** by following the process.
+> **V2.0**: Rewritten as an AI guidance script. Rules only, no fixed templates — AI generates frameworks and materials based on your specific needs.
 
 ---
 
-## Workflow Overview
+## What It Does
+
+Instead of giving you templates to fill in, this project gives your AI a complete competitive analysis workflow. The AI asks you questions, recommends competitors, builds frameworks, finds patterns, and helps you write the report.
 
 ```
-Phase 1        Phase 2         Phase 3         Phase 4          Phase 5
-Define Goal → Select Targets → Build Framework → Find Patterns → Conclusions
+Step 1        Step 2         Step 3         Step 4         Step 5
+Define Goal → Select       → Build        → Find         → Output
+             Competitors    Framework      Patterns       Conclusions
 ```
 
-| Phase | Core Action | Output |
-|-------|------------|--------|
-| Phase 1 Define Goal | Answer "why, who, what" | Analysis Goal Card |
-| Phase 2 Target Selection | Three-layer funnel (direct / indirect / benchmark) | Competitor Profile Card |
-| Phase 3 Build Framework | Choose: Comparison Matrix / User Journey / SWOT / Value Curve | Analysis Matrix |
-| Phase 4 Find Patterns | Fill data, identify 4 types of opportunities | Pattern Classification Table |
-| Phase 5 Conclusions | Judgment + Gap + Path + Risk | Conclusion Report |
+## How to Use
+
+### Option 1: With an AI Agent (Recommended)
+
+Copy this repo URL and paste it into your AI tool:
+
+```
+https://github.com/diandian1001/competitive-analysis-workflow
+```
+
+Then say: *"帮我做竞品分析"* or *"Help me do competitive analysis"*
+
+### Option 2: Read SKILL.md Directly
+
+Open `SKILL.md` and follow the 5-step workflow manually.
 
 ---
 
-## Quick Start
+## What the AI Will Guide You Through
 
-### 1. Clone
-
-```bash
-git clone https://github.com/diandian1001/competitive-analysis-workflow.git
-cd competitive-analysis-workflow
-```
-
-### 2. Follow the Process
-
-1. Copy `templates/Analysis_Goal_Card.md`, fill in your analysis objective
-2. Copy `templates/Competitor_Profile_Card.md`, build a profile for each competitor
-3. Copy `templates/Pattern_Classification.md`, fill in data and find patterns
-4. See `examples/Terminal_Direction_Analysis.md` for a complete walkthrough
-
-### 3. Output Report
-
-Conclusion-first structure:
-
-```
-I. Core Verdict (one sentence)
-II. Key Findings (3-5 points, with data)
-III. Gap Analysis
-IV. Recommended Path
-V. Risk Flags
-```
+| Step | What Happens |
+|------|-------------|
+| Step 1: Define Goal | 4 questions to clarify what you're analyzing and why |
+| Step 2: Select Competitors | Three-layer funnel generates a 5-8 competitor list |
+| Step 3: Build Framework | Decision tree recommends the right comparison framework |
+| Step 4: Find Patterns | Four pattern types with evidence requirements |
+| Step 5: Output Conclusions | Fill-in-the-blank report template |
 
 ---
 
-## Core Tools
+## V2.0 What's New
 
-### Three-Layer Funnel for Target Selection
-
-| Layer | Selection Criteria | Example |
-|-------|-------------------|---------|
-| Direct Competitors | Same industry × Same channel × Same business | Other brands' service accounts in the same sector |
-| Indirect Competitors | Different industry × Same user group × Same scenario | E-commerce platform corresponding channels |
-| Benchmarks | Different industry × Strategies worth borrowing | Brands with strong private domain operations |
-
-### Four Pattern Types
-
-| Pattern | Meaning | Action |
-|---------|---------|--------|
-| They have + We don't | Opportunity | Evaluate whether to build |
-| They have + We do poorly | Gap | Needs improvement |
-| Everyone has + Everyone does it poorly | Industry challenge | Invest cautiously |
-| We have + They don't | Differentiation | Strengthen it |
-
-### Four Analysis Frameworks
-
-- **Framework A: Feature/Content Comparison Matrix** — Most basic, good for feature comparison
-- **Framework B: User Journey Comparison** — Good for conversion path analysis
-- **Framework C: SWOT Differentiation** — Good for conclusion phase
-- **Framework D: Value Curve Comparison** — Good for differentiation positioning, radar charts
+- **AI-first design**: SKILL.md is now a conversation script for AI agents
+- **Rules over templates**: Frameworks and materials generated by AI based on your needs
+- **Decision tree**: Competitor selection and framework choice guided by clear logic
+- **Pattern methodology**: Four-type pattern classification with evidence requirements
 
 ---
 
-## Repository Structure
+## Changelog
 
-```
-competitive-analysis-workflow/
-├── README.md                          # This file (English)
-├── README_zh.md                       # 中文版说明文档
-├── SKILL.md                           # Full workflow (Hermes Agent Skill format)
-├── LICENSE                            # MIT License
-├── templates/
-│   ├── Analysis_Goal_Card.md          # Phase 1 template
-│   ├── Competitor_Profile_Card.md     # Phase 2 template
-│   └── Pattern_Classification.md      # Phase 4 template
-└── examples/
-    └── Terminal_Direction_Analysis.md # Full case study (carrier service account)
-```
-
----
-
-## Use Cases
-
-- Operational strategy validation ("Should we pursue this direction?")
-- Product feature competitive comparison ("What do competitors have that we don't?")
-- Content strategy research ("How are competitors doing content?")
-- Market opportunity scanning ("Is there room in this space?")
-
----
-
-## Common Pitfalls
-
-| Pitfall | Prevention |
-|---------|-----------|
-| Goal too vague, no clear next step | Phase 1 must output an Analysis Goal Card |
-| Listing without analyzing, no comparison or judgment | Use frameworks to force comparison, find patterns |
-| Only looking at direct competitors, missing cross-industry benchmarks | Three-layer funnel, cover at least two layers |
-| Drawing conclusions with insufficient data | Every conclusion must be backed by data |
-| Vague conclusions, not actionable | Every recommendation must have a concrete first step |
+| Version | Date | Changes |
+|---------|------|---------|
+| V1.0 | 2026-06 | Five-phase workflow + templates + case study |
+| V2.0 | 2026-07 | AI-first rewrite: guidance script, rules over templates |
 
 ---
 
 ## Author
 
-**Diandian** — User Researcher, 2+ years UX Research experience
-
-- Psychology background, skilled in quantitative research (survey design, K-Means clustering, session analysis)
-- Research areas: user profiling, conversion funnel analysis, competitive strategy
+**Diandian** — User Researcher, Psychology background, specialized in competitive strategy and operations analysis
 
 ---
 
 ## License
 
-[MIT License](./LICENSE)
+MIT
