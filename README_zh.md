@@ -1,70 +1,107 @@
-# 竞品分析工作流 V2.0
+# 竞品分析工作流 V3.0
 
 [English](README.md)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-7c5cfc.svg)](https://opensource.org/licenses/MIT)
-[![Stars](https://img.shields.io/github/stars/diandian1001/competitive-analysis-workflow?style=social)](https://github.com/diandian1001/competitive-analysis-workflow)
+一个面向 AI Agent 的**证据驱动竞品分析 Skill**。它从业务决策出发，完成竞品筛选、证据采集、框架分析、机会评估与行动建议。
 
-一个 **AI 引导式竞品分析工作流** — 把这个项目丢给任何 AI 工具（ChatGPT/Claude/Hermes/Trae），AI 就会变成你的分析助手，从目标定义到结论输出一步步带你走。
+> V3.0 不再要求 AI 机械地逐题提问，也不把“竞品有、我方没有”直接视为机会。核心升级是证据治理、机会评估和跨平台适配。
 
-> **V2.0**：重写为 AI 引导脚本。只给规则不给模板 — AI 根据你的具体需求生成框架和材料。
+## 核心能力
 
----
+- 三种模式：快速判断、标准分析、深度研究
+- 候选池筛选：先扫描，再确定核心竞品
+- 证据分级：A/B/C/D 四级置信度
+- 事实分层：事实、推断、待验证、建议
+- 多框架分析：功能矩阵、用户旅程、价值曲线、SWOT/TOWS
+- 决策评估：用户价值、战略适配、成本、风险与时间窗口
+- 平台适配：ChatGPT、Claude、Hermes
+- 质量审查：防止过期信息、主场偏差、伪精确和机械跟随
 
-## 这是什么
+## 工作流程
 
-不是给你模板自己填，而是给 AI 一套完整的竞品分析流程。AI 一步步问你问题、选竞品、建框架、找 Pattern、帮你写报告。
-
+```text
+定义决策问题
+→ 建立候选池
+→ 筛选核心竞品
+→ 采集和分级证据
+→ 选择分析框架
+→ 识别 Pattern
+→ 评估机会与优先级
+→ 输出行动建议
+→ 质量审查
 ```
-Step 1        Step 2         Step 3         Step 4         Step 5
-明确目标  →   选择竞品   →   建立框架   →   发现Pattern →   输出结论
+
+## 怎么使用
+
+### 方式一：交给 AI Agent
+
+把仓库地址或 `SKILL.md` 提供给支持文件或仓库读取的 AI，然后说明业务问题，例如：
+
+```text
+使用这个 Skill，分析运营商服务号与官方 App 的差异化价值。
+目标是支持产品定位决策，优先关注留存、服务效率和低频用户。
 ```
 
-## 怎么用
+### 方式二：复制核心 Skill
 
-### 方式一：给 AI Agent 用（推荐）
+复制 `SKILL.md` 到 AI 项目级 Instructions、系统提示词或 Agent Skill 目录。
 
-复制仓库地址，粘贴到 AI 工具里：
+### 方式三：按平台适配
 
+- ChatGPT：`skills/chatgpt.md`
+- Claude：`skills/claude.md`
+- Hermes：`skills/hermes.md`
+
+核心方法不绑定工具。平台没有联网、文件或代码能力时，AI 必须说明限制，不得假装完成验证。
+
+## 目录
+
+```text
+.
+├── SKILL.md
+├── skills/
+│   ├── chatgpt.md
+│   ├── claude.md
+│   └── hermes.md
+├── references/
+│   ├── competitor-selection.md
+│   ├── evidence-rubric.md
+│   ├── analysis-frameworks.md
+│   └── quality-checklist.md
+├── examples/
+│   └── quick-analysis-example.md
+├── CHANGELOG.md
+├── README.md
+└── README_zh.md
 ```
-https://github.com/diandian1001/competitive-analysis-workflow
-```
 
-然后说：*"帮我做竞品分析"*
+## V3.0 关键变化
 
-### 方式二：自己看 SKILL.md
+| 旧规则 | V3.0 |
+|---|---|
+| 一次只问一个问题 | 信息充分时直接执行 |
+| 每阶段都确认 | 仅在关键歧义影响结论时确认 |
+| 直接选择 5—8 个竞品 | 先建候选池，再筛选 3—6 个核心竞品 |
+| 竞品有、我方没有＝机会 | 先评估用户价值、战略适配、成本和风险 |
+| 高/中/低可信度 | A/B/C/D 证据等级 |
+| 填空式固定报告 | 根据领导、产品、运营、研究受众调整 |
+| 强制找满 Pattern | 找不到时如实说明 |
+| 单一平台无差别执行 | 增加平台能力映射与限制说明 |
 
-打开 `SKILL.md`，按 5 个步骤手动执行。
+## 适用场景
 
----
-
-## AI 会引导你做什么
-
-| 步骤 | 发生什么 |
-|------|---------|
-| Step 1 明确目标 | 4 个问题搞清楚"为什么做+看谁+看什么" |
-| Step 2 选择竞品 | 三层漏斗生成 5-8 个竞品列表 |
-| Step 3 建立框架 | 决策树推荐合适的对比框架 |
-| Step 4 发现Pattern | 四类Pattern分类，每类需要数据支撑 |
-| Step 5 输出结论 | 填空式报告模板 |
-
----
-
-## 更新日志
-
-| 版本 | 日期 | 变更 |
-|------|------|------|
-| V1.0 | 2026-06 | 五阶段流程 + 模板 + 案例 |
-| V2.0 | 2026-07 | AI 优先重写：引导脚本、给规则不给模板 |
-
----
+- 产品功能与服务能力对比
+- 用户旅程、转化与留存分析
+- 内容和运营机制拆解
+- 商业模式与定价研究
+- 市场机会扫描
+- 日常行业动态监测
+- 战略定位与差异化判断
 
 ## 作者
 
-**Diandian** — 用户研究员，心理学本科背景，擅长竞品策略研究与运营方向分析
+**Diandian** — 用户研究员，心理学背景，关注 AI 工作流、用户研究与数据驱动决策。
 
----
-
-## 许可
+## License
 
 MIT
