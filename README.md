@@ -50,8 +50,10 @@ The core skill is tool-agnostic. If a platform lacks browsing, file analysis, co
 ├── SKILL.md
 ├── skills/
 ├── references/
+├── templates/
 ├── examples/
 ├── CHANGELOG.md
+├── LICENSE
 ├── README.md
 └── README_zh.md
 ```

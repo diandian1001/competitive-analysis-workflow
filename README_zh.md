@@ -68,9 +68,15 @@
 │   ├── evidence-rubric.md
 │   ├── analysis-frameworks.md
 │   └── quality-checklist.md
+├── templates/
+│   ├── 分析目标卡.md
+│   ├── 竞品档案卡.md
+│   └── Pattern分类表.md
 ├── examples/
-│   └── quick-analysis-example.md
+│   ├── quick-analysis-example.md
+│   └── 终端方向竞品分析.md
 ├── CHANGELOG.md
+├── LICENSE
 ├── README.md
 └── README_zh.md
 ```
