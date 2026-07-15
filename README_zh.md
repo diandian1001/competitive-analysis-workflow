@@ -1,16 +1,46 @@
-# 竞品分析工作流 V3.0
+# AI 竞品与竞争情报操作系统 V4.0
 
-**证据驱动的 AI 竞品分析 Skill**
+**Evidence-Based Competitive Intelligence Agent — 可移植、可执行、可追踪**
 
 [English](README.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-7c5cfc.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/diandian1001/competitive-analysis-workflow?style=social)](https://github.com/diandian1001/competitive-analysis-workflow)
-[![Version](https://img.shields.io/badge/Version-V3.0-10b981.svg)](https://github.com/diandian1001/competitive-analysis-workflow)
+[![Version](https://img.shields.io/badge/Version-V4.0-10b981.svg)](https://github.com/diandian1001/competitive-analysis-workflow)
 
-把这个仓库交给任何 AI Agent（ChatGPT、Claude、Hermes），告诉它你的业务决策，它就能引导你完成证据驱动的竞品筛选、分析、机会评估与优先级行动建议。
+把这个仓库交给 AI 或 Agent，并告诉它需要支持的业务决策。它会先建立我方基线，再筛选真正相关的竞品，建立 Claim 级证据账本，完成对比、机会评估和行动建议。
 
-> **V3.0** 不再要求 AI 机械地逐题提问，也不把"竞品有、我方没有"直接视为机会。核心升级是证据治理、机会评估和跨平台适配。
+本仓库提供三种入口：
+
+| 入口 | 文件 | 适用场景 |
+|---|---|---|
+| Agent 仓库模式 | `AGENTS.md` | Hermes、Codex、Claude Code 等能够读取仓库的 Agent |
+| Skill 模式 | `SKILL.md` | 支持系统指令、Project Knowledge 或 Skill 的平台 |
+| 任意 AI 便携模式 | `PORTABLE.md` | 无法可靠读取完整 GitHub 仓库的普通 AI |
+
+> 清晰任务直接执行。只有缺失信息会实质改变竞品选择、证据范围或决策结论时才提问。
+
+---
+
+## 一句话启动
+
+### 仓库模式
+
+```text
+读取 AGENTS.md，并使用这个仓库完成以下竞品分析：
+[粘贴业务问题和决策]
+```
+
+### Skill 模式
+
+```text
+使用 SKILL.md，以标准分析模式完成：
+[粘贴业务问题和决策]
+```
+
+### 任意 AI 模式
+
+复制 `PORTABLE.md` 全文并追加任务。
 
 ---
 
@@ -39,11 +69,18 @@
 ## 核心能力
 
 - 三种模式：快速判断、标准分析、深度研究
-- 候选池筛选：先扫描，再确定核心竞品
+- 我方基线：先记录用户、场景、能力、指标、资源和风险约束
+- 动态候选池：根据执行模式和信息增益决定数量
+- 加权竞品筛选：权重随业务决策变化
+- Claim 级证据账本：重要主张关联来源、时间、等级、冲突和局限
 - 证据分级：A/B/C/D 四级置信度（详见[证据规则](references/evidence-rubric.md)）
 - 事实分层：事实、推断、待验证、建议
 - 多框架分析：功能矩阵、用户旅程、价值曲线、SWOT/TOWS
-- 决策评估：用户价值、战略适配、成本、风险与时间窗口
+- 动作与优先级分离：BUILD / VALIDATE / MONITOR / REJECT × P0 / P1 / P2 / P3
+- 三种输出：快速判断、标准分析、深度研究
+- 项目状态：持续记录范围、基线、竞品、证据和下一步
+- 跨工作流路由：用户价值与行为假设转交用户研究操作系统
+- Benchmark：跨平台、重复运行并核验来源
 - 平台适配：ChatGPT、Claude、Hermes
 - 质量审查：防止过期信息、主场偏差、伪精确和机械跟随
 
@@ -53,9 +90,10 @@
 
 ```text
 定义决策问题
+→ 建立我方基线
 → 建立候选池
-→ 筛选核心竞品
-→ 采集和分级证据
+→ 使用决策权重筛选核心竞品
+→ 建立 Claim 级证据账本
 → 选择分析框架
 → 识别 Pattern
 → 评估机会与优先级
@@ -94,7 +132,9 @@
 
 ```
 .
-├── SKILL.md                     ← 核心 Skill（V3.0）
+├── AGENTS.md                    ← Agent 仓库加载与执行协议
+├── PORTABLE.md                  ← 任意 AI 可用的单文件便携版
+├── SKILL.md                     ← 核心操作系统（V4.0）
 ├── README.md                    ← 英文说明文档
 ├── README_zh.md                 ← 中文说明文档（本文件）
 ├── CHANGELOG.md
@@ -109,10 +149,15 @@
 │   ├── analysis-frameworks.md
 │   └── quality-checklist.md
 ├── templates/                   ← 可复用模板
+│   ├── project-state.md
+│   ├── evidence-ledger.md
+│   ├── output-quick.md
+│   ├── output-standard.md
+│   ├── output-deep.md
 │   ├── 分析目标卡.md             ← 分析范围界定
 │   ├── 竞品档案卡.md             ← 竞品信息采集
 │   ├── Pattern分类表.md          ← 模式发现与评估
-│   └── output-template.md        ← 统一结果模板
+│   └── output-template.md        ← 输出模板索引
 ├── examples/                    ← 填写示例
 │   ├── quick-analysis-example.md
 │   └── 终端方向竞品分析.md
@@ -147,18 +192,25 @@
 
 ---
 
-## V3.0 关键变化
+## V4.0 核心升级
 
-| 旧规则 | V3.0 |
-|--------|------|
-| 一次只问一个问题 | 信息充分时直接执行 |
-| 每阶段都确认 | 仅在关键歧义影响结论时确认 |
-| 直接选择 5—8 个竞品 | 先建候选池，再筛选 3—6 个核心竞品 |
-| 竞品有、我方没有＝机会 | 先评估用户价值、战略适配、成本和风险 |
-| 高/中/低可信度 | A/B/C/D 证据等级 |
-| 填空式固定报告 | 根据领导、产品、运营、研究受众调整 |
-| 强制找满 Pattern | 找不到时如实说明 |
-| 单一平台无差别执行 | 增加平台能力映射与限制说明 |
+- **我方基线前置**：先理解我方用户、场景、能力、指标和约束；
+- **动态候选池**：根据模式和信息增益决定数量，不机械凑满；
+- **加权筛选**：权重随业务决策变化，不再固定等权 `/14`；
+- **Claim 级证据账本**：每条重要主张可追踪到来源、时间和局限；
+- **动作与优先级分离**：BUILD、VALIDATE、MONITOR、REJECT × P0/P1/P2/P3；
+- **三种输出模板**：快速判断、标准分析、深度研究；
+- **项目状态管理**：持续记录范围、基线、竞品、证据和下一步；
+- **单文件便携版**：`PORTABLE.md` 可直接复制给任意 AI；
+- **Agent 加载协议**：`AGENTS.md` 规定仓库读取和执行顺序；
+- **跨工作流路由**：用户价值与行为假设转交用户研究操作系统。
+
+## 更新日志
+
+| 版本 | 日期 | 变更 |
+|---|---|---|
+| V3.0 | 2026-07 | 证据治理、机会评估和跨平台适配 |
+| V4.0 | 2026-07 | 执行封装升级：我方基线、加权筛选、证据账本、动作类型、便携版与 Agent 协议 |
 
 ---
 

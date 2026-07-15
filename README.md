@@ -1,16 +1,44 @@
-# Competitive Analysis Workflow V3.0
+# AI Competitive Intelligence Operating System V4.0
 
-**Evidence-Driven Competitive Analysis Skill for AI Agents**
+**A portable, executable and traceable evidence-based competitive intelligence package**
 
 [中文版](README_zh.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-7c5cfc.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/diandian1001/competitive-analysis-workflow?style=social)](https://github.com/diandian1001/competitive-analysis-workflow)
-[![Version](https://img.shields.io/badge/Version-V3.0-10b981.svg)](https://github.com/diandian1001/competitive-analysis-workflow)
+[![Version](https://img.shields.io/badge/Version-V4.0-10b981.svg)](https://github.com/diandian1001/competitive-analysis-workflow)
 
-Give this repo to any AI agent (ChatGPT, Claude, Hermes), tell it your business decision, and it will guide evidence-driven competitor screening, analysis, opportunity evaluation, and prioritized recommendations.
+Give this repository to an AI or Agent and state the business decision it must support. It establishes the own-product baseline first, screens relevant competitors with decision-specific weights, manages a Claim-level evidence ledger, and produces comparisons, opportunity judgments and executable actions.
 
-> **V3.0** replaces rigid step-by-step prompting with evidence governance, decision criteria, and platform-aware execution.
+| Entry | File | Best for |
+|---|---|---|
+| Repository-aware Agent | `AGENTS.md` | Agents that can inspect a repository |
+| Skill / System Instructions | `SKILL.md` | Platforms supporting Projects, Skills or system instructions |
+| Any AI Chat | `PORTABLE.md` | Models that cannot reliably read a full GitHub repository |
+
+Clear tasks execute directly. The AI asks a question only when missing information would materially change competitor selection, evidence scope or the decision conclusion.
+
+---
+
+## Start in One Prompt
+
+### Repository Mode
+
+```text
+Read AGENTS.md and use this repository to complete the following competitive analysis:
+[paste the business problem and decision]
+```
+
+### Skill Mode
+
+```text
+Use SKILL.md in Standard Analysis Mode to complete:
+[paste the business problem and decision]
+```
+
+### Any AI Mode
+
+Copy the full contents of `PORTABLE.md`, then append the task.
 
 ---
 
@@ -39,11 +67,17 @@ Give this repo to any AI agent (ChatGPT, Claude, Hermes), tell it your business 
 ## Core Capabilities
 
 - Three modes: quick judgment, standard analysis, deep research
-- Candidate-pool screening before selecting core competitors
+- Own-product baseline covering users, scenarios, capabilities, metrics, constraints and risks
+- Dynamic candidate pools based on execution mode and information gain
+- Weighted competitor selection aligned to the business decision
+- Claim-level evidence ledger with source, time, grade, conflicts and limitations
 - A/B/C/D evidence confidence levels (see [Evidence Rubric](references/evidence-rubric.md))
 - Separation of facts, inferences, open questions, and recommendations
 - Functional matrix, user journey, value curve, SWOT/TOWS
-- Opportunity evaluation across user value, strategic fit, cost, timing, and risk
+- Separate action types (BUILD / VALIDATE / MONITOR / REJECT) from priority (P0 / P1 / P2 / P3)
+- Quick, standard and deep output templates
+- Persistent project state and cross-workflow routing
+- Cross-platform repeated-run Benchmark with source verification
 - Platform guidance for ChatGPT, Claude, and Hermes
 - Quality checks against stale data, home-team bias, false precision, and feature copying
 
@@ -53,9 +87,10 @@ Give this repo to any AI agent (ChatGPT, Claude, Hermes), tell it your business 
 
 ```text
 Define the decision
+→ Establish the own-product baseline
 → Build a candidate pool
-→ Select core competitors
-→ Collect and grade evidence
+→ Select core competitors using decision-specific weights
+→ Build the Claim-level evidence ledger
 → Choose analysis frameworks
 → Identify patterns
 → Evaluate opportunities
@@ -94,7 +129,9 @@ The core skill is tool-agnostic. If a platform lacks browsing, file analysis, co
 
 ```
 .
-├── SKILL.md                     ← Core skill (V3.0)
+├── AGENTS.md                    ← Repository loading and execution protocol
+├── PORTABLE.md                  ← Single-file package for any AI
+├── SKILL.md                     ← Core operating system (V4.0)
 ├── README.md                    ← This file (English)
 ├── README_zh.md                 ← Chinese documentation
 ├── CHANGELOG.md
@@ -109,10 +146,15 @@ The core skill is tool-agnostic. If a platform lacks browsing, file analysis, co
 │   ├── analysis-frameworks.md
 │   └── quality-checklist.md
 ├── templates/                   ← Reusable templates
+│   ├── project-state.md
+│   ├── evidence-ledger.md
+│   ├── output-quick.md
+│   ├── output-standard.md
+│   ├── output-deep.md
 │   ├── 分析目标卡.md             ← Analysis scoping card
 │   ├── 竞品档案卡.md             ← Competitor profile card
 │   ├── Pattern分类表.md          ← Pattern discovery & evaluation
-│   └── output-template.md        ← Unified result template
+│   └── output-template.md        ← Output template index
 ├── examples/                    ← Worked examples
 │   ├── quick-analysis-example.md
 │   └── 终端方向竞品分析.md
@@ -147,18 +189,25 @@ The core skill is tool-agnostic. If a platform lacks browsing, file analysis, co
 
 ---
 
-## V3.0 Key Changes from V2.0
+## V4.0 Core Upgrades
 
-| Old Rule | V3.0 |
-|----------|------|
-| Ask one question at a time | Execute directly when information is sufficient |
-| Confirm every phase | Only confirm when ambiguity changes the conclusion |
-| Pick 5–8 competitors directly | Build a candidate pool first, then screen 3–6 core |
-| "Competitor has X, we don't" = opportunity | First evaluate user value, strategic fit, cost, risk |
-| High/Medium/Low confidence | A/B/C/D evidence grades |
-| Fixed fill-in-the-blank report | Adapt output to audience (executive, product, ops, research) |
-| Must fill every Pattern slot | Honestly state when no patterns are found |
-| One-size-fits-all execution | Platform capability mapping and limitation disclosure |
+- **Own-product baseline first**: understand users, scenarios, capabilities, metrics and constraints before judging competitors
+- **Dynamic candidate pool**: size follows execution mode and information gain
+- **Weighted selection**: decision-specific weights replace fixed equal-weight `/14` scoring
+- **Claim-level evidence ledger**: every important claim traces to its source, time and limitations
+- **Action and priority separation**: BUILD, VALIDATE, MONITOR or REJECT × P0, P1, P2 or P3
+- **Three output templates**: quick judgment, standard analysis and deep research
+- **Project state management**: persist scope, baseline, competitors, evidence and next action
+- **Portable single-file package**: copy `PORTABLE.md` directly into any AI chat
+- **Agent loading protocol**: `AGENTS.md` defines repository reading and execution order
+- **Cross-workflow routing**: user-value and behavior hypotheses route to the AI User Research Operating System
+
+## Changelog
+
+| Version | Date | Changes |
+|---|---|---|
+| V3.0 | 2026-07 | Evidence governance, opportunity evaluation and platform-aware execution |
+| V4.0 | 2026-07 | Execution packaging: own-product baseline, weighted selection, evidence ledger, action types, portable file and Agent protocol |
 
 ---
 
