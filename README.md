@@ -16,19 +16,21 @@ Give this repo to any AI agent (ChatGPT, Claude, Hermes), tell it your business 
 
 ## 30-Second Example
 
+> ⚠️ **以下为结构示意，不代表实际竞品调研结论。** 展示使用该 Workflow 时可以产出什么结构的分析。
+
 **Business question:**
 > *"Our service-oriented WeChat Official Account is transitioning. Which operational mechanisms should we keep to sustain user return visits?"*
 
 **What the workflow produces:**
 
-| Output | Example |
-|--------|---------|
-| **Core judgment** | Retain high-frequency lightweight interactions (check-in, reminders, quick queries); deprioritize content browsing that users prefer in-app |
-| **Core competitors** | 4 screened from a 10-candidate pool: 2 direct competitors on same channel, 1 indirect with strong return-visit mechanics, 1 benchmark from another industry |
-| **Key facts** | 【事实·A】Competitor A's daily check-in feature drives 40% of return visits (official help docs) 【事实·B】All 4 core competitors maintain a "quick action" menu within 1 tap (direct product testing) 【推断·C】Users treat Official Accounts as utility channels, not content destinations |
-| **Evidence grades** | 7 findings at grade A, 12 at B, 5 at C, 3 at D |
+| Output | Structure (illustrative) |
+|--------|--------------------------|
+| **Core judgment** | [Based on evidence evaluation — filled after actual analysis] |
+| **Core competitors** | Candidate pool → screened to core competitors with documented selection rationale |
+| **Key facts** | 【事实·A】Competitor official page confirms check-in feature exists 【事实·B】Direct product testing confirms check-in accessible within 1 tap 【推断·D】Check-in may serve as a return trigger, but lacks usage data to verify contribution rate 【待验证】Actual return-visit rate and reward cost for check-in users |
+| **Evidence grades** | Grade distribution depends on available sources — see [Evidence Rubric](references/evidence-rubric.md) |
 | **Open questions** | 【待验证】Would users return for "usage reports" without explicit push notifications? 【待验证】Is check-in stickiness transferable across industries? |
-| **Recommendations** | **P0**: Add a 1-tap "daily check-in" with micro-reward **P1**: Test weekly usage summary push **P2**: Explore community features — monitor competitor experiments first **Not recommended**: Build a full content feed (users prefer apps for browsing) |
+| **Recommendations** | **P0/P1/P2** prioritized by evidence strength, user value, and strategic fit — specific actions filled after analysis |
 
 → [Full example](examples/终端方向竞品分析.md) | [Quick analysis example](examples/quick-analysis-example.md)
 
