@@ -16,7 +16,7 @@ Give this repo to any AI agent (ChatGPT, Claude, Hermes), tell it your business 
 
 ## 30-Second Example
 
-> ⚠️ **以下为结构示意，不代表实际竞品调研结论。** 展示使用该 Workflow 时可以产出什么结构的分析。
+> ⚠️ **The following is a structural illustration, not actual competitive analysis conclusions.** It shows the output format this workflow can produce.
 
 **Business question:**
 > *"Our service-oriented WeChat Official Account is transitioning. Which operational mechanisms should we keep to sustain user return visits?"*
@@ -27,9 +27,9 @@ Give this repo to any AI agent (ChatGPT, Claude, Hermes), tell it your business 
 |--------|--------------------------|
 | **Core judgment** | [Based on evidence evaluation — filled after actual analysis] |
 | **Core competitors** | Candidate pool → screened to core competitors with documented selection rationale |
-| **Key facts** | 【事实·A】Competitor official page confirms check-in feature exists 【事实·B】Direct product testing confirms check-in accessible within 1 tap 【推断·D】Check-in may serve as a return trigger, but lacks usage data to verify contribution rate 【待验证】Actual return-visit rate and reward cost for check-in users |
+| **Key facts** | 【事实/Fact·A】Competitor official page confirms check-in feature exists 【事实/Fact·B】Direct product testing confirms check-in accessible within 1 tap 【推断/Inference·D】Check-in may serve as a return trigger, but lacks usage data to verify contribution rate 【待验证/Unverified】Actual return-visit rate and reward cost for check-in users |
 | **Evidence grades** | Grade distribution depends on available sources — see [Evidence Rubric](references/evidence-rubric.md) |
-| **Open questions** | 【待验证】Would users return for "usage reports" without explicit push notifications? 【待验证】Is check-in stickiness transferable across industries? |
+| **Open questions** | 【待验证/Unverified】Would users return for "usage reports" without explicit push notifications? 【待验证/Unverified】Is check-in stickiness transferable across industries? |
 | **Recommendations** | **P0/P1/P2** prioritized by evidence strength, user value, and strategic fit — specific actions filled after analysis |
 
 → [Full example](examples/终端方向竞品分析.md) | [Quick analysis example](examples/quick-analysis-example.md)
